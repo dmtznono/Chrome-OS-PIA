@@ -50,7 +50,7 @@ class PartesSO extends StatelessWidget {
             const SizedBox(height: 10),
 
             Image.asset(
-              'assets/images/partesOS.jpeg',
+              'assets/images/partesSO.jpeg',
               width: double.infinity,
             ),
 

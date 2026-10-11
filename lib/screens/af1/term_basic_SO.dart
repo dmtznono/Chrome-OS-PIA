@@ -145,7 +145,7 @@ class TerminologiaBasicaSO extends StatelessWidget {
             const SizedBox(height: 10),
 
             Image.asset(
-              'assets/images/PgestionOS.jpeg',
+              'assets/images/terminologiabasicaOS.jpeg',
               width: double.infinity,
             ),
           ],

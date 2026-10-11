@@ -55,7 +55,7 @@ class CompSO extends StatelessWidget {
                 ),
 
                 Image.asset(
-                  'assets/images/componentesOS.jpeg',
+                  'assets/images/componenteOS.jpeg',
                 ),
               ],
             ),
