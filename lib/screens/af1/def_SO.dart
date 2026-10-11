@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class DefSO extends StatelessWidget {
   const DefSO({super.key});
 
@@ -12,49 +11,109 @@ class DefSO extends StatelessWidget {
       ),
 
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20.0),
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
             const Text(
-              'Un sistema operativo es el programa principal que'
-              'hace funcionar una computadora o celular, siendo'
-              'el software encargado de gestionar los recursos de'
-              'hardware y permitir la ejecución de aplicaciones, el'
-              'almacenamiento de información y el control de los'
-              'componentes del dispositivo.',
+              'Definición de sistema operativo',
               style: TextStyle(
-                fontSize: 21,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
 
             const SizedBox(height: 20),
 
-            ExpansionTile(
-              title: const Text('Chrome OS'),
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    'Chrome OS es un SO que se basa en Linux y centra su funcionamiento'
-                    'en la nube, permitiendo al usuario estar siempre conectado.'
-                    'Es seguro, versátil y sencillo de administrar, y es el componente'
-                    'principal de las Chromebooks.',
-                    style: TextStyle(
-                      fontSize: 17,
-                      height: 1.5,
-                    ),
-                  ),
-                ),
-
-                Image.asset(
-                  'assets/images/DefOS.jpeg',
-                ),
-              ],
+            // IMAGEN
+            Image.asset(
+              'assets/images/sistema_operativo.jpeg',
+              width: double.infinity,
             ),
 
+            const SizedBox(height: 20),
+
+            const Text(
+              '¿Qué es un sistema operativo?',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            const Text(
+              'Un sistema operativo es el software encargado de gestionar los recursos de hardware y permitir la ejecución de aplicaciones, el almacenamiento de información y el control de los componentes de un dispositivo.  '
+              'a la definición del sistema operativo...',
+              style: TextStyle(
+                fontSize: 17,
+                height: 1.5,
+              ),
+            ),
+
+            const SizedBox(height: 25),
+
+            const Text(
+              'Chrome OS ',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            const Text(
+              'Chrome OS es un sistema operativo que está basado en Linux y es desarrollado por Google, está centrado en la nube, es decir, busca aprovechar los espacios de la misma, esta es su principal diferencia ante otros sistemas como Windows y macOS, con este enfoque le permite al usuario estar siempre conectado. Es un SO seguro, versátil y sencillo de administrar y a la fecha forma el principal componente de las Chromebook.',
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                fontSize: 17,
+                height: 1.5,
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            const Text(
+              'Aquí continúa la información del tema. '
+              'Puedes colocar varios párrafos, imágenes y '
+              'diferentes apartados.',
+              style: TextStyle(
+                fontSize: 17,
+                height: 1.5,
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            // OTRA IMAGEN
+            Image.asset(
+              'assets/images/arquitectura_so.jpg',
+              width: double.infinity,
+            ),
+
+            const SizedBox(height: 20),
+
+            const Text(
+              'Conclusión',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            const Text(
+              'Aquí colocas la conclusión del tema...',
+              style: TextStyle(
+                fontSize: 17,
+                height: 1.5,
+              ),
+            ),
           ],
         ),
       ),
