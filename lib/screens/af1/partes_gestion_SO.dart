@@ -17,18 +17,19 @@ class PartesGestionSO extends StatelessWidget {
           children: [
 
             const Text(
-              'Módulos y subsistemas especializados del sistema operativo'
-              'diseñados para administrar, planificar y supervisar recursos'
-              'de hardware específicos: procesos, memoria RAM, almacenamiento'
-              'secundario y dispositivos de entrada/salida (E/S).'
-              'Son los "departamentos de administración" del sistema operativo.'
-              'Un departamento se encarga de repartir el tiempo de trabajo del'
-              'procesador, otro administra el espacio en la memoria RAM, otro'
-              'organiza los archivos guardados y otro controla el teclado, la pantalla'
+              'Módulos y subsistemas especializados del sistema operativo '
+              'diseñados para administrar, planificar y supervisar recursos '
+              'de hardware específicos: procesos, memoria RAM, almacenamiento '
+              'secundario y dispositivos de entrada/salida (E/S). '
+              'Son los "departamentos de administración" del sistema operativo. '
+              'Un departamento se encarga de repartir el tiempo de trabajo del '
+              'procesador, otro administra el espacio en la memoria RAM, otro '
+              'organiza los archivos guardados y otro controla el teclado, la pantalla '
               'y los dispositivos USB.',
+              textAlign: TextAlign.justify,
               style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
+                fontSize: 17,
+                height: 1.5,
               ),
             ),
 
@@ -37,7 +38,7 @@ class PartesGestionSO extends StatelessWidget {
             const Text(
               'Chrome OS',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -45,26 +46,28 @@ class PartesGestionSO extends StatelessWidget {
             const SizedBox(height: 20),
 
             const Text(
-              'Chrome OS divide sus áreas de gestión adaptadas a dispositivos'
+              'Chrome OS divide sus áreas de gestión adaptadas a dispositivos '
               'ligeros y orientados a la nube:',
+              textAlign: TextAlign.justify,
               style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
+                fontSize: 17,
+                height: 1.5,
               ),
             ),
 
             const SizedBox(height: 15),
 
             ExpansionTile(
-              title: const Text('Gestión de procesos'),
+              title: const Text('Gestión de procesos', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Asigna tiempos de CPU equilibrando las pestañas activas del navegador'
+                    'Asigna tiempos de CPU equilibrando las pestañas activas del navegador '
                     'frente a los procesos de fondo mediante el planificador del Kernel de Linux.',
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 16,
                       height: 1.5,
                     ),
                   ),
@@ -73,15 +76,16 @@ class PartesGestionSO extends StatelessWidget {
             ),
 
             ExpansionTile(
-              title: const Text('Gestión de memoria'),
+              title: const Text('Gestión de memoria', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Implementa zRAM (compresión de memoria) y Tab Discarding para pausar'
+                    'Implementa zRAM (compresión de memoria) y Tab Discarding para pausar '
                     'o liberar pestañas inactivas cuando la memoria se agota.',
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 16,
                       height: 1.5,
                     ),
                   ),
@@ -90,15 +94,16 @@ class PartesGestionSO extends StatelessWidget {
             ),
 
             ExpansionTile(
-              title: const Text('Gestión de almacenamiento'),
+              title: const Text('Gestión de almacenamiento', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Utiliza un sistema de archivos local cifrado por usuario (eCryptfs/fscrypt)'
+                    'Utiliza un sistema de archivos local cifrado por usuario (eCryptfs/fscrypt) '
                     'integrado directamente con la sincronización en Google Drive.',
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 16,
                       height: 1.5,
                     ),
                   ),
@@ -107,15 +112,16 @@ class PartesGestionSO extends StatelessWidget {
             ),
 
             ExpansionTile(
-              title: const Text('Gestión de dispositivos (E/S)'),
+              title: const Text('Gestión de dispositivos (E/S)', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Coordina periféricos, cámaras, pantallas táctiles y dispositivos de red mediante'
+                    'Coordina periféricos, cámaras, pantallas táctiles y dispositivos de red mediante '
                     'controladores unificados del kernel de Linux. ',
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 16,
                       height: 1.5,
                     ),
                   ),
