@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Importa los 7 archivos de subtemas de la AF2
+// 7 archivos de subtemas de la AF2
 import 'multitarea_concurrencia.dart';
 import 'tipos_concurrencia.dart';
 import 'modelos_programacion.dart';
