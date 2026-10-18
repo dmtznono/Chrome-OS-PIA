@@ -14,31 +14,45 @@ class MultitareaConcurrenciaScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'La multitarea es la capacidad del sistema operativo para ejecutar y gestionar múltiples procesos al mismo tiempo, compartiendo los recursos del hardware. La concurrencia ocurre cuando varias secuencias de instrucciones avanzan su ejecución en periodos de tiempo superpuestos.',
-              textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 17, height: 1.5),
-            ),
-            const SizedBox(height: 20),
             ExpansionTile(
-              title: const Text('Android', style: TextStyle(fontWeight: FontWeight.w600)),
+              title: const Text('Definición conceptual', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'En Android, la multitarea se gestiona mediante un ciclo de vida de aplicaciones y el uso de hilos en segundo plano para evitar que la interfaz de usuario se congele mientras se realizan operaciones pesadas como peticiones de red.',
+                    'La multitarea es la capacidad del sistema operativo para ejecutar y gestionar múltiples procesos al mismo tiempo, compartiendo los recursos del hardware. La concurrencia ocurre cuando varias secuencias de instrucciones avanzan su ejecución en periodos de tiempo superpuestos, gestionadas por el planificador (scheduler) del núcleo del sistema.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
                 ),
-                Image.asset(
-                  'assets/images/multitarea_android.png',
-                  errorBuilder: (context, error, stackTrace) => Container(
-                    padding: const EdgeInsets.all(20),
-                    color: Colors.grey[200],
-                    child: const Text('Imagen: assets/images/multitarea_android.png'),
+              ],
+            ),
+            ExpansionTile(
+              title: const Text('Explicación y Ejemplo Práctico', style: TextStyle(fontWeight: FontWeight.w600)),
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    'Imagina que eres un chef en una cocina: la multitarea es tu habilidad para cocinar una sopa, asar carne y hornear un pastel al mismo tiempo. La concurrencia es cómo te mueves rápidamente entre revolver la sopa y revisar el horno para que todo avance sin que nada se queme.\n\n'
+                    'Ejemplo práctico en el sistema: Tener abierta una videollamada en una aplicación de comunicación, un documento de texto abierto y música reproduciéndose en segundo plano. Si una aplicación falla, las demás continúan funcionando gracias a que son procesos aislados.',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(fontSize: 16, height: 1.5),
                   ),
                 ),
+              ],
+            ),
+            ExpansionTile(
+              title: const Text('Aplicación en Android / Arquitectura', style: TextStyle(fontWeight: FontWeight.w600)),
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    'Android utiliza un núcleo basado en Linux que maneja la concurrencia de forma nativa mediante una arquitectura multi-proceso. El sistema operativo aísla cada aplicación, servicio y actividad en su propio proceso independiente, asignando ciclos de CPU de manera concurrente para garantizar estabilidad y rendimiento.',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(fontSize: 16, height: 1.5),
+                  ),
+                ),
+                Image.asset('assets/images/multitarea_android.png'),
               ],
             ),
           ],
