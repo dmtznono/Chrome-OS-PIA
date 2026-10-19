@@ -1,22 +1,150 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/pantalla_placeholder.dart';
+// 7 archivos de subtemas de la AF2
+import 'multitarea_concurrencia.dart';
+import 'tipos_concurrencia.dart';
+import 'modelos_programacion.dart';
+import 'caracteristicas_concurrencia.dart';
+import 'ventajas_ejecucion.dart';
+import 'procesos_concurrentes.dart';
+import 'estados_transiciones.dart';
 
-/// Pantalla principal de AF2 - Procesos y concurrencia.
-/// Responsable: Integrante 3. Ruta: '/af2'.
-///
-/// TODO (Int. 3): reemplazar el placeholder por el menú interactivo
-/// con los temas de las fichas de los Int. 9, 10, 11, 12 y 13.
-/// Agrega tus demás pantallas en esta misma carpeta (screens/af2/).
 class PantallaAF2 extends StatelessWidget {
   const PantallaAF2({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const PantallaPlaceholder(
-      titulo: 'AF2 - Procesos y concurrencia',
-      descripcion: 'Contenido de AF2 sobre Chrome OS (pendiente).',
-      icono: Icons.account_tree,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('AF2 - Procesos y concurrencia'),
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Text(
+              'Procesos y concurrencia',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Selecciona un subtema para consultar la información.',
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            const SizedBox(height: 25),
+
+            // 1. Multitarea y concurrencia
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MultitareaConcurrenciaScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.layers),
+              label: const Text('Multitarea y concurrencia en Android'),
+            ),
+            const SizedBox(height: 15),
+
+            // 2. Tipos de concurrencia
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TiposConcurrenciaScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.merge_type),
+              label: const Text('Tipos de concurrencia en Android'),
+            ),
+            const SizedBox(height: 15),
+
+            // 3. Modelos de programación concurrente
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ModelosProgramacionScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.code),
+              label: const Text('Modelos de programación concurrente'),
+            ),
+            const SizedBox(height: 15),
+
+            // 4. Características de la concurrencia
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CaracteristicasConcurrenciaScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.featured_play_list),
+              label: const Text('Características de la concurrencia'),
+            ),
+            const SizedBox(height: 15),
+
+            // 5. Ventajas de la ejecución concurrente
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const VentajasEjecucionScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.thumb_up),
+              label: const Text('Ventajas de la ejecución concurrente'),
+            ),
+            const SizedBox(height: 15),
+
+            // 6. Procesos concurrentes
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProcesosConcurrentesScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.memory),
+              label: const Text('Procesos concurrentes en Android'),
+            ),
+            const SizedBox(height: 15),
+
+            // 7. Estados y transiciones de un proceso
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const EstadosTransicionesScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.sync_alt),
+              label: const Text('Estados y transiciones de un proceso'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
