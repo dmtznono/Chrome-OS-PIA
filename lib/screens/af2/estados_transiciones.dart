@@ -20,7 +20,8 @@ class EstadosTransicionesScreen extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'A lo largo de su vida, un proceso pasa por distintos estados según sus necesidades. Analogía de la fila de un banco:\n\n'
+                    'A lo largo de su vida, un proceso pasa por distintos estados fundamentales: Nuevo, Listo, En ejecución, Bloqueado y Terminado, gestionados mediante transiciones controladas por el kernel.\n\n'
+                    'Analogía de la fila de un banco:\n'
                     '• Nuevo: Acabas de llegar y te registran.\n'
                     '• Listo: Estás formado esperando tu turno de atención.\n'
                     '• En ejecución: Te toca la ventanilla; estás usando el CPU.\n'
@@ -33,12 +34,12 @@ class EstadosTransicionesScreen extends StatelessWidget {
               ],
             ),
             ExpansionTile(
-              title: const Text('Transiciones y Optimización de Memoria', style: TextStyle(fontWeight: FontWeight.w600)),
+              title: const Text('Chrome OS', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Las transiciones clave incluyen de Nuevo a Listo (admitir), de Listo a Ejecución (despachar), de Ejecución a Bloqueado (espera de E/S o red) y de Ejecución a Terminado. Los procesos pasan gran parte del tiempo en espera de datos de red, y si el equipo escasea de memoria, el sistema puede descartar elementos inactivos y recargarlos al regresar a ellos.',
+                    'En Chrome OS, los procesos de las pestañas y aplicaciones transicionan constantemente entre estos estados. Dado que los Chromebooks suelen operar con recursos de memoria RAM limitados, cuando una pestaña pasa mucho tiempo en estado bloqueado o inactivo, Chrome OS optimiza el rendimiento utilizando memoria virtual comprimida (zram) o descartando de forma temporal el proceso de la pestaña inactiva para liberar recursos, recargándola automáticamente cuando el usuario vuelve a seleccionarla.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
