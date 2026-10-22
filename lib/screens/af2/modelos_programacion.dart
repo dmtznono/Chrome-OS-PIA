@@ -21,8 +21,8 @@ class ModelosProgramacionScreen extends StatelessWidget {
                   padding: EdgeInsets.all(16.0),
                   child: Text(
                     'Los modelos de programación concurrente son formas de organizar un programa para que varias tareas avancen de manera concurrente y se comuniquen o coordinen entre sí.\n\n'
-                    '• Memoria compartida: Varias tareas pueden acceder a una misma zona de memoria común para intercambiar datos. Requiere control de acceso para evitar conflictos.\n\n'
-                    '• Paso de mensajes: Las tareas se comunican enviándose información mediante mensajes estructurados, manteniendo cada una su propia memoria privada sin requerir acceso directo compartido.\n\n'
+                    '• Memoria compartida: Varias tareas acceden a una misma zona de memoria común para intercambiar datos, requiriendo mecanismos estrictos de sincronización para evitar conflictos.\n\n'
+                    '• Paso de mensajes: Las tareas se comunican enviándose información mediante mensajes estructurados, manteniendo cada una su propia memoria privada.\n\n'
                     'Analogía: La memoria compartida es como varias personas escribiendo sobre el mismo documento; el paso de mensajes es cuando cada persona tiene su propio documento y se envían notas entre ellas.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
@@ -31,12 +31,12 @@ class ModelosProgramacionScreen extends StatelessWidget {
               ],
             ),
             ExpansionTile(
-              title: const Text('Aplicación y Ejemplo Práctico', style: TextStyle(fontWeight: FontWeight.w600)),
+              title: const Text('Chrome OS', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'El sistema operativo necesita administrar diferentes actividades simultáneas (como consultar una página, reproducir contenido multimedia o redactar apuntes). Si las tareas requieren información común, controlan el acceso compartido; si operan de forma separada, intercambian datos mediante mensajes controlados.',
+                    'Chrome OS coordina la comunicación entre sus componentes utilizando ambos modelos de programación. Los hilos internos de un mismo proceso del navegador utilizan memoria compartida sincronizada, mientras que los distintos procesos independientes (como las extensiones, el shell de comandos o las pestañas del navegador) se comunican de forma segura mediante paso de mensajes estructurados gestionados por el núcleo de Linux.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
