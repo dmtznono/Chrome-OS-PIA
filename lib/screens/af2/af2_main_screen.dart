@@ -8,6 +8,7 @@ import 'caracteristicas_concurrencia.dart';
 import 'ventajas_ejecucion.dart';
 import 'procesos_concurrentes.dart';
 import 'estados_transiciones.dart';
+import '../../widgets/visor_pdf.dart';
 
 class PantallaAF2 extends StatelessWidget {
   const PantallaAF2({super.key});
@@ -141,6 +142,23 @@ class PantallaAF2 extends StatelessWidget {
               },
               icon: const Icon(Icons.sync_alt),
               label: const Text('Estados y transiciones de un proceso'),
+            ),
+            const SizedBox(height: 25),
+            // Documento PDF de la AF2
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const VisorPdf(
+                      titulo: 'Documento AF2',
+                      ruta: 'assets/pdfs/AF2-equipo-completa.pdf',
+                    ),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.picture_as_pdf),
+              label: const Text('Ver documento PDF de la AF2'),
             ),
           ],
         ),

@@ -7,6 +7,7 @@ import 'manejo_rec_SO.dart';
 import 'partes_SO.dart';
 import 'term_basic_SO.dart';
 import 'partes_gestion_SO.dart';
+import '../../widgets/visor_pdf.dart';
 
 class PantallaAF1 extends StatelessWidget {
   const PantallaAF1({super.key});
@@ -143,6 +144,24 @@ class PantallaAF1 extends StatelessWidget {
               },
               icon: const Icon(Icons.admin_panel_settings),
               label: const Text('Partes de gestión'),
+            ),
+
+            const SizedBox(height: 25),
+            // Documento PDF de la AF1
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const VisorPdf(
+                      titulo: 'Documento AF1',
+                      ruta: 'assets/pdfs/EQUIPO3_AF1.pdf',
+                    ),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.picture_as_pdf),
+              label: const Text('Ver documento PDF de la AF1'),
             ),
           ],
         ),

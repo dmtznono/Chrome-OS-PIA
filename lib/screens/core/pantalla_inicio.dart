@@ -4,7 +4,7 @@ import '../../routes.dart';
 /// Pantalla de inicio: botón al menú y tabla de integrantes del equipo.
 /// Responsable: Int. 1 (esqueleto) / Int. 4 (diseño).
 ///
-/// Fotos: se buscan en 'assets/images/equipo/<matricula>.jpg'. Mientras no
+/// Fotos: se buscan en 'assets/images/<matricula>.jpg'. Mientras no
 /// existan (o no estén declaradas en pubspec.yaml) se muestra un ícono.
 class PantallaInicio extends StatelessWidget {
   const PantallaInicio({super.key});
@@ -16,7 +16,7 @@ class PantallaInicio extends StatelessWidget {
     _Integrante('2149169', 'Flores Dávila Andrea Sarahy', 'IAS', '100%'),
     _Integrante('2145905', 'Garza Jasso Erubiel Elías', 'IAS', '100%'),
     _Integrante('2145422', 'Marroquín Tobías José Eduardo', 'IAS', '100%'),
-    _Integrante('2052641', 'Martínez Alvárez Alejandro', 'ITS', '80%'),
+    _Integrante('2052641', 'Martínez Alvárez Alejandro', 'ITS', '100%'),
     _Integrante('2153829', 'Martínez García Donovan Alexander (Líder de equipo)',
         'IAS', '100%',
         lider: true),
@@ -120,7 +120,7 @@ class PantallaInicio extends StatelessWidget {
       width: 70,
       height: 80,
       child: Image.asset(
-        'assets/images/equipo/$matricula.jpg',
+        'assets/images/$matricula.jpg',
         fit: BoxFit.cover,
         errorBuilder: (_, _, _) => Container(
           color: Colors.grey.shade300,
