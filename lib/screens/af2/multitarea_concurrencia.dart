@@ -7,7 +7,7 @@ class MultitareaConcurrenciaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Multitarea y concurrencia en Android'),
+        title: const Text('Multitarea y concurrencia'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
@@ -34,7 +34,7 @@ class MultitareaConcurrenciaScreen extends StatelessWidget {
                   padding: EdgeInsets.all(16.0),
                   child: Text(
                     'Imagina que eres un chef en una cocina: la multitarea es tu habilidad para cocinar una sopa, asar carne y hornear un pastel al mismo tiempo. La concurrencia es cómo te mueves rápidamente entre revolver la sopa y revisar el horno para que todo avance sin que nada se queme.\n\n'
-                    'Ejemplo práctico en el sistema: Tener abierta una videollamada en una aplicación de comunicación, un documento de texto abierto y música reproduciéndose en segundo plano. Si una aplicación falla, las demás continúan funcionando gracias a que son procesos aislados.',
+                    'Ejemplo práctico en el sistema: Tener abierta una videollamada, un documento de texto en línea y música reproduciéndose en segundo plano. Si una aplicación falla, las demás continúan funcionando gracias a que son procesos aislados.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
@@ -42,12 +42,12 @@ class MultitareaConcurrenciaScreen extends StatelessWidget {
               ],
             ),
             ExpansionTile(
-              title: const Text('Aplicación en Android / Arquitectura', style: TextStyle(fontWeight: FontWeight.w600)),
+              title: const Text('Chrome OS', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Android utiliza un núcleo basado en Linux que maneja la concurrencia de forma nativa mediante una arquitectura multi-proceso. El sistema operativo aísla cada aplicación, servicio y actividad en su propio proceso independiente, asignando ciclos de CPU de manera concurrente para garantizar estabilidad y rendimiento.',
+                    'Chrome OS implementa la multitarea y la concurrencia a través de una arquitectura multiproceso basada en el kernel de Linux. Cada pestaña del navegador, aplicación web, extensión y contenedor de Linux se ejecuta en su propio proceso independiente y aislado. Esto permite que el sistema asigne ciclos de CPU de manera concurrente, garantizando que si un proceso o pestaña experimenta un fallo, el resto del sistema operativo y las demás aplicaciones continúen operando con total estabilidad.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),

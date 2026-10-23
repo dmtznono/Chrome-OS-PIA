@@ -20,10 +20,9 @@ class VentajasEjecucionScreen extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'La ventaja principal es eliminar los tiempos muertos de la computadora. Si un programa necesita descargar un archivo, la velocidad depende de la red y no del chip; en lugar de dejar el procesador inactivo, el sistema asigna ese tiempo a otra tarea. Sus beneficios clave son:\n\n'
-                    '• Respuesta rápida: El teclado, pantalla y táctil no se congelan ante procesos pesados.\n'
-                    '• Aprovechamiento de la CPU: El procesador trabaja constantemente sin esperas innecesarias de red o disco.\n'
-                    '• Multitarea fluida: Permite alternar eficazmente entre múltiples entornos de ejecución.',
+                    'La ventaja principal es eliminar los tiempos muertos de la computadora. Cuando un programa espera datos de red o disco, el sistema asigna ese tiempo de procesamiento a otra tarea útil, logrando:\n\n'
+                    '• Respuesta rápida: La interfaz y los elementos táctiles o de teclado no se bloquean.\n'
+                    '• Aprovechamiento óptimo de la CPU: El procesador trabaja de manera constante sin desperdiciar ciclos valiosos.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
@@ -31,12 +30,12 @@ class VentajasEjecucionScreen extends StatelessWidget {
               ],
             ),
             ExpansionTile(
-              title: const Text('Aplicación práctica', style: TextStyle(fontWeight: FontWeight.w600)),
+              title: const Text('Chrome OS', style: TextStyle(fontWeight: FontWeight.w600)),
               children: [
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'Ejemplo: Estar en una videollamada mientras se guardan cambios en la nube de forma simultánea. El sistema asigna prioridades dinámicas para asegurar que el audio y el vídeo de la llamada no sufran cortes ni distorsiones.',
+                    'Para Chrome OS, la ejecución concurrente es vital dado que está optimizado para equipos ligeros (Chromebooks). Permite mantener múltiples pestañas abiertas, sincronizar archivos con Google Drive en segundo plano y reproducir contenido multimedia simultáneamente sin que el sistema pierda velocidad ni agilidad en la respuesta al usuario.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
