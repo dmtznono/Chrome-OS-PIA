@@ -77,16 +77,7 @@ class DefSO extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            const Text(
-              'Aquí continúa la información del tema. '
-              'Puedes colocar varios párrafos, imágenes y '
-              'diferentes apartados.',
-              style: TextStyle(
-                fontSize: 17,
-                height: 1.5,
-              ),
-            ),
-
+           
             const SizedBox(height: 20),
 
             // OTRA IMAGEN
@@ -95,25 +86,7 @@ class DefSO extends StatelessWidget {
               width: double.infinity,
             ),
 
-            const SizedBox(height: 20),
-
-            const Text(
-              'Conclusión',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-
-            const SizedBox(height: 10),
-
-            const Text(
-              'Aquí colocas la conclusión del tema...',
-              style: TextStyle(
-                fontSize: 17,
-                height: 1.5,
-              ),
-            ),
+        
           ],
         ),
       ),
