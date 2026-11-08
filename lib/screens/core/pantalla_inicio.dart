@@ -10,21 +10,21 @@ class PantallaInicio extends StatelessWidget {
   const PantallaInicio({super.key});
 
   static const List<_Integrante> _equipo = [
-    _Integrante('2173227', 'Chávez Romero Abner Daniel', 'IAS', '100%'),
-    _Integrante('2145945', 'Dávila Gongora Leonardo', 'ITS', '100%'),
-    _Integrante('2094613', 'Del Ángel Hernández Edgar Daniel', 'ITS', '100%'),
-    _Integrante('2149169', 'Flores Dávila Andrea Sarahy', 'IAS', '100%'),
-    _Integrante('2145905', 'Garza Jasso Erubiel Elías', 'IAS', '100%'),
-    _Integrante('2145422', 'Marroquín Tobías José Eduardo', 'IAS', '100%'),
-    _Integrante('2052641', 'Martínez Alvárez Alejandro', 'ITS', '100%'),
+    _Integrante('2173227', 'Chávez Romero Abner Daniel', 'IAS', '80%'),
+    _Integrante('2145945', 'Dávila Gongora Leonardo', 'ITS', '250%'),
+    _Integrante('2094613', 'Del Ángel Hernández Edgar Daniel', 'ITS', '80%'),
+    _Integrante('2149169', 'Flores Dávila Andrea Sarahy', 'IAS', '150%'),
+    _Integrante('2145905', 'Garza Jasso Erubiel Elías', 'IAS', '70%'),
+    _Integrante('2145422', 'Marroquín Tobías José Eduardo', 'IAS', '80%'),
+    _Integrante('2052641', 'Martínez Alvárez Alejandro', 'ITS', '60%'),
     _Integrante('2153829', 'Martínez García Donovan Alexander (Líder de equipo)',
-        'IAS', '100%',
+        'IAS', '200%',
         lider: true),
-    _Integrante('2147723', 'Molina Garcia Jorge Luis', 'ITS', '100%'),
-    _Integrante('2145757', 'Morales Quintanilla Alonso', 'ITS', '70%'),
-    _Integrante('2226953', 'Revuelta Martínez Carolina', 'IAS', '100%'),
-    _Integrante('2149382', 'Ruiz Treviño Esdras Alexander', 'IAS', '100%'),
-    _Integrante('2144697', 'Salazar Arzola Karla Nozomi', 'IAS', '100%'),
+    _Integrante('2147723', 'Molina Garcia Jorge Luis', 'ITS', '80%'),
+    _Integrante('2145757', 'Morales Quintanilla Alonso', 'ITS', '0%'),
+    _Integrante('2226953', 'Revuelta Martínez Carolina', 'IAS', '80%'),
+    _Integrante('2149382', 'Ruiz Treviño Esdras Alexander', 'IAS', '70%'),
+    _Integrante('2144697', 'Salazar Arzola Karla Nozomi', 'IAS', '80%'),
   ];
 
   static const _encabezados = [
@@ -47,6 +47,8 @@ class PantallaInicio extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                _encabezadoUanl(),
+                const SizedBox(height: 24),
                 FilledButton.icon(
                   onPressed: () => Navigator.pushNamed(context, AppRoutes.menu),
                   icon: const Icon(Icons.play_arrow),
@@ -86,6 +88,83 @@ class PantallaInicio extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  /// Encabezado institucional: logos UANL y FIME, nombres y datos del PIA.
+  static const Color _verde = Color(0xFF1F9E58);
+
+  Widget _encabezadoUanl() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/logo_uanl.png', width: 90, height: 90),
+            const SizedBox(width: 12),
+            const Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    'UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'FACULTAD DE INGENIERÍA MECÁNICA Y ELÉCTRICA',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 12),
+            Image.asset('assets/images/logo_fime.png', width: 80, height: 100),
+          ],
+        ),
+        const SizedBox(height: 24),
+        _dato([('Unidad De Aprendizaje', 'Sistemas Operativos')]),
+        _dato([('Semestre', 'Agosto- Diciembre 2026')]),
+        _dato([('PIA', 'Manual de Usuario  - Final.')]),
+        _dato([('Catedrático', 'Dra. Marín Martínez Norma Edith')]),
+        _dato([
+          ('Hora', 'M4'),
+          ('Grupo', '001'),
+          ('Plan', '440'),
+          ('Equipo', '3'),
+          ('Aula', '4206'),
+        ]),
+      ],
+    );
+  }
+
+  /// Una línea centrada de pares "Etiqueta: valor" (etiqueta en negro,
+  /// valor en verde).
+  Widget _dato(List<(String, String)> pares) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: Text.rich(
+        TextSpan(
+          style: const TextStyle(fontSize: 15, color: Colors.black),
+          children: [
+            for (var k = 0; k < pares.length; k++) ...[
+              if (k > 0) const TextSpan(text: '     '),
+              TextSpan(text: '${pares[k].$1}: '),
+              TextSpan(
+                text: pares[k].$2,
+                style: const TextStyle(color: _verde),
+              ),
+            ],
+          ],
+        ),
+        textAlign: TextAlign.center,
       ),
     );
   }
