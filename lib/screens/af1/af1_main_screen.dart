@@ -155,7 +155,7 @@ class PantallaAF1 extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => const VisorPdf(
                       titulo: 'Documento AF1',
-                      ruta: 'assets/pdfs/EQUIPO3_AF1.pdf',
+                      ruta: 'assets/pdfs/AF1.pdf',
                     ),
                   ),
                 );

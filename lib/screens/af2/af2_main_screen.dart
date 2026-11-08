@@ -152,7 +152,7 @@ class PantallaAF2 extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => const VisorPdf(
                       titulo: 'Documento AF2',
-                      ruta: 'assets/pdfs/AF2-equipo-completa.pdf',
+                      ruta: 'assets/pdfs/AF2.pdf',
                     ),
                   ),
                 );
