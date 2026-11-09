@@ -80,7 +80,7 @@ class PantallaInicio extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 const Text(
-                  'A 09 de Octubre del 2026. San Nicolás de los Garza, '
+                  'A 09 de Noviembre del 2026. San Nicolás de los Garza, '
                   'Nuevo León, México.',
                   textAlign: TextAlign.center,
                 ),
@@ -132,7 +132,7 @@ class PantallaInicio extends StatelessWidget {
         const SizedBox(height: 24),
         _dato([('Unidad De Aprendizaje', 'Sistemas Operativos')]),
         _dato([('Semestre', 'Agosto- Diciembre 2026')]),
-        _dato([('PIA', 'Manual de Usuario  - Final.')]),
+        _dato([('PIA', 'Chrome OS - PIA')]),
         _dato([('Catedrático', 'Dra. Marín Martínez Norma Edith')]),
         _dato([
           ('Hora', 'M4'),
